@@ -1,0 +1,12 @@
+#include <conio.h>
+#include <stdio.h>
+#include <windows.h>
+
+int a = 0;
+int main(int argc, char *argv[]) {
+    asm("mov eax, 0xFF");
+    asm("mov _a, eax");
+    printf("Result of a = %d\n", a);
+    getch();
+    return 0;
+ };
