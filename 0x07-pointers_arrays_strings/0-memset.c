@@ -1,28 +1,37 @@
 #include "main.h"
+
 /**
- *  * _strcat - concatenates two strings,
- *   *
- *    * @dest: destination.
- *     * @src: source.
- *      * Return: the pointer to dest.
- *       *
- *        */
-char *_strcat(char *dest, char *src)
+ *
+ *  * _memset - fill a block of memory with a specific value
+ *
+ *  * @s: starting address of memory to be filled
+ *
+ *  * @b: the desired value
+ *
+ *  * @n: number of bytes to be changed
+ *
+ *  *
+ *
+ *  * Return: changed array with new value for n bytes
+ *
+ *  */
+
+char *_memset(char *s, char b, unsigned int n)
+
 {
-		int count = 0, count2 = 0;
 
-			while (*(dest + count) != '\0')
-					{
-								count++;
-									}
+	        int i = 0;
 
-				while (count2 >= 0)
-						{
-									*(dest + count) = *(src + count2);
-											if (*(src + count2) == '\0')
-															break;
-													count++;
-															count2++;
-																}
-					return (dest);
+	        for (; n > 0; i++)
+
+		        {
+
+			                s[i] = b;
+
+			                n--;
+
+			        }
+
+	        return (s);
+
 }
