@@ -1,15 +1,12 @@
-#include "main.h"
-
+#include <unistd.h>
 /**
- * _abs - computes the absolute value of an integer
- * @n: the int to check
- * Return: the absolute value of int
+ * _putchar - write the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and error is set appropriately.
  */
-int _abs(int n)
+int _putchar(char c)
 {
-	if (n >= 0)
-	{
-		return (n);
-	}
-	return (-n);
+	return (write(1, &c, 1));
 }
