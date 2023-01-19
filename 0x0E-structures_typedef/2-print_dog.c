@@ -3,6 +3,7 @@
 /**
  * print_dog - prints a struct dog
  * @d: pointer to struct type dog
+ * @struct: houses dog's information
  * Return: Nothing cause it's void
  */
 void print_dog(struct dog *d)
