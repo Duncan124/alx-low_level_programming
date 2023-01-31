@@ -1,18 +1,16 @@
-#include "lists.h"
+#include<stdio.h>
+
 /**
- * free_list - frees a list
- * @head: head of the linked list.
- * Return: no return.
+ * myStartupFun - Apply the constructor attribute to myStartupFun() so that it
+ *   is executed before main()
  */
+void myStartupFun(void) __attribute__ ((constructor));
 
-void free_list(list_t *head)
+/**
+ * myStartupFun - implementation of myStartupFun
+ */
+void myStartupFun(void)
 {
-	list_t *current;
-
-	while ((current = head) != NULL)
-	{
-		head = head->next;
-		free(current->str);
-		free(current);
-	}
+	printf("You're beat! and yet, you must allow,\n");
+	printf("I bore my house upon my back!\n");
 }
